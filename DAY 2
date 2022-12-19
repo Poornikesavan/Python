@@ -1,0 +1,12 @@
+# Python
+a = list(map(int,input().split()))
+b = []
+for i in a:
+    temp = 1
+    for j in a:
+        if j==i:
+            continue
+        else:
+            temp*=j
+    b.append(temp)
+print(b)    
