@@ -1,0 +1,9 @@
+# Python
+a = list(map(int,input().split()))
+m,n = max(a),min(a)
+for i in range(n,m+2):
+    if i == 0:
+        continue
+    if i not in a:
+        print(i)
+        break
