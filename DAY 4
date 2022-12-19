@@ -1,0 +1,5 @@
+# Python
+def format_number(N):
+    print('{:,}'.format(N))
+n = int(input())
+format_number(n)
