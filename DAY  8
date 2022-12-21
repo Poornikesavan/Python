@@ -1,0 +1,8 @@
+# Python
+array = list(input().split(' '))
+input_1 = input()
+new_array = []
+for i in array:
+    if input_1 in i:
+        new_array.append(i)
+print(new_array)
