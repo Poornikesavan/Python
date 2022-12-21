@@ -1,0 +1,12 @@
+# Python
+num = len(input())
+c1 = 1
+c2 = 2
+if num == 1:
+    print(num)
+if num == 2:
+    print(num)
+else:
+    for i in range(0, num-3):
+        c1, c2 = c2, c1 + c2
+print(c1+c2)
