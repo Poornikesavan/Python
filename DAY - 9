@@ -1,0 +1,15 @@
+# Python
+# "Disarium Number"
+
+def disarium(x):
+    x = 1
+    result = 0
+    for i in map(int, str(n)):
+        result += i**x
+        x += 1
+    if result == n:
+        return "Disarium Number"
+    else:
+        return "Not a Disarium Number"    
+n = int(input())
+print(disarium(n))
