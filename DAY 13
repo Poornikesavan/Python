@@ -1,0 +1,15 @@
+# Python
+
+a = ['a', 'e', 'i', 'o', 'u']
+res = []
+def vowel(x):
+    for i in range(len(n) -1):
+        if n[i][-1] in a and n[i+1][0] in a:
+            res.append(i)
+    if res == []:
+        return 'False'
+    else:
+        return 'True'
+        
+n = input().split(" ")
+print(vowel(n))
