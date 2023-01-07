@@ -1,0 +1,14 @@
+# Python
+
+a = []
+for i in range(97,123):
+    a.append(chr(i))
+def index(s):  
+    x = 0
+    for i in s:
+        if a.index(i) > x:
+            x = a.index(i) + 1
+    result = str(x) + a[x-1]
+    return result
+s = input().lower()
+print(index(s))
