@@ -1,0 +1,59 @@
+CONSTRUCTOR:
+      ** Constructors are generally used for instantiating an object.
+      ** The task of constructors is to initialize(assign values) to the data members of the class when an object of the class is created.
+      
+Syntax for constructor:
+
+       def __init__(self):
+       # body of the constructor
+       
+Two types of Constructor:
+      i)default constructor
+      ii)parameterized constructor
+  
+Default Constructor:
+       The default constructor is a simple constructor which doesn’t accept any arguments.
+       Its definition has only one argument which is a reference to the instance being constructed.
+       
+       Example:
+        def __init__(self):
+           self.name = "Poorni"
+Parameterized Constructor:
+      constructor with parameters is known as parameterized constructor. 
+      The parameterized constructor takes its first argument as a reference to the instance being constructed known as self and the rest of the arguments are provided by the programmer.
+      
+      Example:
+         def __init__(self, f, s):
+            self.first = f
+            self.second = s
+            
+ INHERITANCE:
+       Inheritance allows us to define a class that inherits all the methods and properties from another class.
+       Parent class is the class being inherited from, also called base class.
+       Child class is the class that inherits from another class, also called derived class.
+       
+  Types Of Inheritance:
+    i)Single 
+    ii)Multiple
+    iii)Multilevel
+    iv)Hierarchical
+    v)Hybrid
+    
+ STACK:
+      A stack is a linear data structure that stores items in a Last-In/First-Out (LIFO) or First-In/Last-Out (FILO) manner.
+      In stack, a new element is added at one end and an element is removed from that end only. 
+      The insert and delete operations are often called push and pop.
+      push(a) – It is used to inserts the element – Time Complexity: O(1)
+      pop() – It is used to deletes the topmost element of the stack – Time Complexity: O(1)
+      
+      Example:
+           Browser History
+           
+           
+ QUEUE:
+      Queue is a linear data structure that stores items in First In First Out (FIFO) manner.
+      With a queue, the least recently added item is removed first.
+      A good example of queue is any queue of consumers for a resource where the consumer that came first is served first.
+      
+      Example:
+           Call Center Systems
