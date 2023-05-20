@@ -1,0 +1,21 @@
+Polymorphism:
+      Polymorphism allows us to perform a single action in different ways.
+      In other words, polymorphism allows you to define one interface and have multiple implementations.
+      The word “poly” means many and “morphs” means forms, So it means many forms.
+      
+Example
+       Lets consider a person who is working in the company so he is an employee,the same person who is son of his parent.
+       the same person have different roles in his life which is called polymorphism.
+      
+Encapsulation:
+       It describes the concept of bundling data and methods within a single unit.
+       So, for example, when you create a class, it means you are implementing encapsulation.
+       A class is an example of encapsulation as it binds all the data members (instance variables) and methods into a single unit.
+          
+Data Abstraction:
+      Abstraction is defined as a process of handling complexity by hiding unnecessary information from the user. 
+      This is one of the core concepts of object-oriented programming (OOP) languages.
+      
+      Example 
+            bank account system
+      
