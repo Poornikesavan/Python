@@ -1,0 +1,129 @@
+class User_Details:
+    print("Welcome to Movie Ticket Booking App")
+    def __init__ (self,user_id, password,name,gender,mail):
+        self.user_id=user_id
+        self.password=password
+        self.name=name
+        self.gender=gender
+        self.mail=mail
+    def display_details(self):
+        print("Name:",self.name,"\nGender:",self.gender,"\nMail ID:",self.mail,"\n-------------------")
+    def logging_in(self,user_id_entered,password_entered):
+        if self.user_id==user_id_entered and self.password==password_entered:
+            print("Login Sucessful !\n-------------------")
+            user1.display_details()
+            t1.display_theatres()
+            t2.display_theatres()
+            t3.display_theatres()
+            mv_list=int(input("Enter Theatre ID to see movie list:"))  
+            if mv_list==2000:
+                print("Movie listings at PVR THEATRE:","\n------------------")
+                for movie_details in PVR_movies:
+                    movie = Movie_listings(*movie_details)
+                    movie.display_movie()
+                movie_select=input("Enter the movie ID to confirm:")
+                if movie_select=="1g":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*200
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="2g":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*150
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="3g":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*150
+                    print("Total ticket cost is:",amt)
+                
+            elif mv_list==2001:
+                print("Movie listings at AGP THEATRE:","\n------------------")
+                for movie_details in AGP_movies:
+                    movie = Movie_listings(*movie_details)
+                    movie.display_movie()
+                movie_select=input("Enter the movie ID to confirm:")
+                if movie_select=="1a":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*150
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="2a":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*200
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="3a":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*200
+                    print("Total ticket cost is:",amt)
+
+            elif mv_list==2002:
+                print("Movie listings at VPR THEATRE:","\n------------------")
+                for movie_details in VPR_movies:
+                    movie = Movie_listings(*movie_details)
+                    movie.display_movie()
+                movie_select=input("Enter the movie ID to confirm:")
+                if movie_select=="1r":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*100
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="2r":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*150
+                    print("Total ticket cost is:",amt)
+                elif movie_select=="3r":
+                    seat_count=int(input("Enter no.of seats:"))
+                    amt=seat_count*200
+                    print("Total ticket cost is:",amt)
+
+            else:
+                print('none')
+            
+            conf=input("Enter 'yes' to confirm:")
+            if conf=='yes':
+                print("\n-----------------\nSuccessfully Booked\nThank you for using the app\n---------------")
+            else:
+                print("Cancelled Booking")
+        else:
+            print("------Invalid Details--------\n Please, Enter the details correctly")
+
+class Theatre:
+    def __init__(self,th_name,theatre_id,theatre_location,theatre_sp):
+        self.theatre_id=theatre_id
+        self.th_name=th_name
+        self.theatre_location=theatre_location
+        self.theatre_sp=theatre_sp
+    def display_theatres(self):
+        print("Theatre Name:",self.th_name,"\nTheater_ID:",self.theatre_id,"\nLocation:",self.theatre_location,"\nFeatures:",self.theatre_sp,"\n-------------------")
+class Movie_listings:
+    def __init__ (self,movie_id,movie_name,movie_lang,duration,certif,tick_cost):
+        self.movie_id=movie_id
+        self.movie_name=movie_name
+        self.movie_lang=movie_lang
+        self.duration=duration
+        self.certif=certif
+        self.tick_cost=tick_cost
+    def display_movie(self):
+        print("Movie ID:",self.movie_id,"\nMovie Name:",self.movie_name,"\nLanguage:",self.movie_lang,"\nDuration:",self.duration,"\nCertificate:",self.certif,"\nTicket Cost:",self.tick_cost,"\n-------------------")
+
+user_id_entered = input("Enter user_id: ")
+password_entered = input("Enter password: ")
+user1 = User_Details("Poorni","1234","Poornima","Female","poorni@gmail.com")
+
+t1=Theatre("PVR THEATRE",2000,"CHENNAI","\nIt has maximum of 240 seats ")
+t2=Theatre("AGP Cinemas",2001,"CHENNAI","\nIt has maximum of 200 seats ")
+t3=Theatre("VPR THEATRE",2002,"CHENNAI","\nIt has maximum of 400 seats ")
+
+PVR_movies=[
+     ["1g","Pettai","Tamil",'2hrs 45mins',"U","Rs.200"],
+     ["2g","Singam","Telugu",'2hrs 40mins',"U","Rs.150"],
+     ["3g","KGF","Tamil",'2hrs 10mins',"U","Rs.150"]
+]
+AGP_movies=[
+     ["1a","Thotta","Tamil",'2hrs 30mins',"U","Rs.150"],
+     ["2a","zara","Hindi","3 hrs","U","Rs.200"],
+     ["3a","Wednesday","English","2 hrs","U","Rs.200"]
+]
+VPR_movies=[
+     ["1r","Soorarai Potru","Tamil","2 hrs 15 mins","U","Rs.100"],
+     ["2r","Spider","English","2 hrs","A","Rs.150"],
+     ["3r","Zara Hatchke","Hindi","2 hrs","U","Rs.200"]
+]
+user1.logging_in(user_id_entered,password_entered)
